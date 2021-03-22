@@ -51,6 +51,12 @@ Applications below must be installed.
 $ docker build -t nuxtspa:latest .
 ```
 
+## Run
+
+```
+$ docker run -p 80:80 --restart always -d --name nuxtspa nuxtspa
+```
+
 ## ToDo
 
 - [] Add PWA Support. (Easy. But not become simple example)
