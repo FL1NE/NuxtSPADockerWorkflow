@@ -45,6 +45,12 @@ Applications below must be installed.
 
 - [nginx official docker container image](https://hub.docker.com/_/nginx) (w/ custom conf)
 
+## Build
+
+```
+$ docker build -t nuxtspa:latest .
+```
+
 ## ToDo
 
 - [] Add PWA Support. (Easy. But not become simple example)
