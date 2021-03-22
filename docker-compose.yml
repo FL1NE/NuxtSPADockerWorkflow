@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  https-portal:
+    image: steveltn/https-portal:latest
+    container_name: https-portal
+    ports:
+      - 80:80
+      - 443:443
+    links:
+      - nuxtspa
+    restart: always
+    environment:
+      DOMAINS: 'yourdomain.com -> http://nuxtspa:80'
+      STAGE: 'production' # Don't use production until staging works
+      # FORCE_RENEW: 'true'
+
+  nuxtspa:
+    image: nuxtspa
+    container_name: nuxtspa
+    restart: always
